@@ -3,10 +3,10 @@ void sort()
     {
  
         int i, j, a, n, number[30];
-        printf("Enter the value of N \n");
+        printf("\nEnter the number of elements to be sorted : ");
         scanf("%d", &n);
  
-        printf("Enter the numbers \n");
+        printf("Enter the numbers : ");
         for (i = 0; i < n; ++i)
             scanf("%d", &number[i]);
  
