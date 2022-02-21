@@ -1,30 +1,36 @@
 #include <stdio.h>
-#include<string.h>
-void sort() {
-   char str[5][50], temp[50];
-   printf("Enter 5 words: ");
-
-   // Getting strings input
-   for (int i = 0; i < 5; ++i) {
-      fgets(str[i], sizeof(str[i]), stdin);
-   }
-
-   // storing strings in the lexicographical order
-   for (int i = 0; i < 5; ++i) {
-      for (int j = i + 1; j < 5; ++j) {
-
-         // swapping strings if they are not in the lexicographical order
-         if (strcmp(str[i], str[j]) > 0) {
-            strcpy(temp, str[i]);
-            strcpy(str[i], str[j]);
-            strcpy(str[j], temp);
-         }
-      }
-   }
-
-   printf("\nIn the lexicographical order: \n");
-   for (int i = 0; i < 5; ++i) {
-      fputs(str[i], stdout);
-   }
-//   return 0;
-}
+    void main()
+    {
+ 
+        int i, j, a, n, number[30];
+        printf("Enter the value of N \n");
+        scanf("%d", &n);
+ 
+        printf("Enter the numbers \n");
+        for (i = 0; i < n; ++i)
+            scanf("%d", &number[i]);
+ 
+        for (i = 0; i < n; ++i) 
+        {
+ 
+            for (j = i + 1; j < n; ++j)
+            {
+ 
+                if (number[i] > number[j]) 
+                {
+ 
+                    a =  number[i];
+                    number[i] = number[j];
+                    number[j] = a;
+ 
+                }
+ 
+            }
+ 
+        }
+ 
+        printf("The numbers arranged in ascending order are given below \n");
+        for (i = 0; i < n; ++i)
+            printf("%d\n", number[i]);
+ 
+    }
