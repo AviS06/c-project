@@ -5,7 +5,7 @@ void reverse()
   char str[1000], rev[1000];
   int i, j, count = 0;
   scanf("%s", str);
-  printf("\nString Before Reverse: %s", str);
+  printf("String Before Reverse: %s", str);
   //finding the length of the string
   while (str[count] != '\0')
   {
@@ -20,6 +20,6 @@ void reverse()
     j--;
   }
 
-  printf("\nString After Reverse: %s", rev);
+  printf("String After Reverse: %s", rev);
 }
 
